@@ -120,5 +120,8 @@ We use Jupyter Notebook to process and transform the dataset. Execute the notebo
 4. Fill in your **credentials**.
 5. If the connection is successful, the following tables will appear:
 
-🎯 **Select the `candidates_hired` table and start creating your visualizations!**
+🎯 **Select the `cleaned_candidates` table and start creating your visualizations!**
+
+---
+Thank you! 😊
 
