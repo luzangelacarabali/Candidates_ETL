@@ -71,20 +71,6 @@ cd Candidates_ETL
 
 To install Poetry, follow [this link](https://hickory-advantage-9e8.notion.site/installation-poetry-1aa6979ac44380848b2cf0f3f4a423ca?pvs=4).
 
-Once the virtual environment is created, run:
-
-```sh
-poetry install
-```
-
-Now, you can run the notebooks!
-
-### 3️⃣ Set Up a Virtual Environment
-
-```sh
-poetry run jupyter notebook
-```
-
 ### 4️⃣ Configure the Database Connection
 
 To establish the database connection, we use the `connection_db.py` module. This script loads environment variables from a configuration file. Follow these steps to set it up:
