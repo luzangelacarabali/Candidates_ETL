@@ -62,8 +62,7 @@ The dataset (`candidates.csv`) contains **50,000 rows** and **10 columns**, each
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone <repository_url>
-cd <project_directory>
+git clone  https://github.com/luzangelacarabali/Candidates_ETL.git
 ```
 
 ### 2️⃣ Install Dependencies with Poetry
@@ -88,7 +87,7 @@ Now, you can run the notebooks!
 
 ```sh
 poetry install
-poetry shell
+poetry run jupyter notebook
 ```
 
 ### 4️⃣ Configure the Database Connection
