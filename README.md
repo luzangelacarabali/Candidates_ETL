@@ -68,7 +68,7 @@ cd Candidates_ETL
 
 ### 2️⃣ Install Dependencies with Poetry
 
-To install Poetry, follow [this link](https://python-poetry.org/docs/).
+To install Poetry, follow https://www.notion.so/installation-poetry-1aa6979ac44380848b2cf0f3f4a423ca?pvs=4 .
 
 Once the virtual environment is created, run:
 
