@@ -1,142 +1,104 @@
-Workshop #1: Data Engineering
+# Workshop #1: Data Engineering
 
-By Luz Angela Carabali Mulato (@luzangelacarabli)
+## By Luz Ángela Carabalí Mulato (@luzangelacarabli)
 
-Overview ✨
+---
+
+## ✨ Overview
 
 In this workshop, we worked with randomly generated candidate data stored in a CSV file. The objective was to load, clean, and transform the data to extract meaningful insights using Python, Jupyter Notebook, PostgreSQL, and Power BI.
 
-Tools Used
+---
 
-Python 3.12 ➜ Download
+## 🛠 Tools Used
 
-Jupyter Notebook ➜ VS Code extension for notebooks
+- **Python 3.12** ➜ [Download](https://www.python.org/downloads/)
+- **Jupyter Notebook** ➜ [VS Code extension for notebooks](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- **PostgreSQL** ➜ [Download](https://www.postgresql.org/download/)
+- **Power BI (Desktop version)** ➜ [Download](https://powerbi.microsoft.com/en-us/downloads/)
 
-PostgreSQL ➜ Download
+---
 
-Power BI (Desktop version) ➜ Download
+## 📦 Required Python Libraries
 
-Required Python Libraries
+These libraries are included in the Poetry project configuration file (`pyproject.toml`):
 
-These libraries are included in the Poetry project configuration file (pyproject.toml):
+- `pandas`
+- `matplotlib`
+- `seaborn`
+- `sqlalchemy`
+- `dotenv`
+- `numpy`
+- `scikit-learn`
+- `psycopg2`
 
-pandas
+The step-by-step installation process will be described later.
 
-matplotlib
+---
 
-seaborn
+## 📊 Dataset Information
 
-sqlalchemy
+The dataset (`candidates.csv`) contains **50,000 rows** and **10 columns**, each describing a candidate in the recruitment process. After transformations, the dataset is optimized for Power BI visualization.
 
-dotenv
+### **Dataset Structure**
 
-numpy
+| Column Name               | Data Type | Description                                  |
+|---------------------------|-----------|----------------------------------------------|
+| `first_name`             | Object    | Candidate's first name                      |
+| `last_name`              | Object    | Candidate's last name                       |
+| `email`                  | Object    | Candidate's email                           |
+| `country`                | Object    | Candidate's country of residence           |
+| `application_date`       | Object    | Date of application submission             |
+| `yoe` (Years of Experience) | Integer | Candidate's total years of experience      |
+| `seniority`              | Object    | Candidate’s seniority level                |
+| `technology`             | Object    | Technology the candidate specializes in    |
+| `code_challenge_score`   | Integer   | Score obtained in the coding challenge     |
+| `technical_interview_score` | Integer | Score obtained in the technical interview |
 
-scikit-learn
+---
 
-psycopg2
+## 🚀 Running the Project
 
-These libraries are included in the Poetry project config file (pyproject.toml). The step-by-step installation will be described later.
+### 1️⃣ Clone the Repository
 
-Dataset Information 📊
-
-The dataset (candidates.csv) contains 50,000 rows and 10 columns, each describing a candidate in the recruitment process. After transformations, the dataset is optimized for Power BI visualization.
-Dataset Structure
-
-Column Name
-
-Data Type
-
-Description
-
-first_name
-
-Object
-
-Candidate's first name
-
-last_name
-
-Object
-
-Candidate's last name
-
-email
-
-Object
-
-Candidate's email
-
-country
-
-Object
-
-Candidate's country of residence
-
-application_date
-
-Object
-
-Date of application submission
-
-yoe (Years of Experience)
-
-Integer
-
-Candidate's total years of experience
-
-seniority
-
-Object
-
-Candidate’s seniority level
-
-technology
-
-Object
-
-Technology the candidate specializes in
-
-code_challenge_score
-
-Integer
-
-Score obtained in the coding challenge
-
-technical_interview_score
-
-Integer
-
-Score obtained in the technical interview
-
-
-Running the Project 🚀
-1️⃣ Clone the Repository
-
+```sh
 git clone <repository_url>
 cd <project_directory>
+```
 
-Instalación de las dependencias con Poetry
-Para instalar Poetry siga este enlace .
+### 2️⃣ Install Dependencies with Poetry
 
+To install Poetry, follow [this link](https://python-poetry.org/docs/).
 
-Una vez creado el entorno virtual, ejecutar poetry installpara instalar las dependencias. En caso de error con el archivo .lockpoetry lock , simplemente ejecutar para solucionarlo.
+Once the virtual environment is created, run:
 
-¡Ahora puedes ejecutar los cuadernos!
+```sh
+poetry install
+```
 
-2️⃣ Set Up a Virtual Environment
+In case of errors with the `.lock` file, execute:
 
+```sh
+poetry lock
+```
+
+Now, you can run the notebooks!
+
+### 3️⃣ Set Up a Virtual Environment
+
+```sh
 poetry install
 poetry shell
+```
 
-3️⃣ Configure the Database Connection
+### 4️⃣ Configure the Database Connection
 
-To establish the database connection, we use the connection_db.py module. This script loads environment variables from a configuration file. Follow these steps to set it up:
+To establish the database connection, we use the `connection_db.py` module. This script loads environment variables from a configuration file. Follow these steps to set it up:
 
-Create an .env file inside a new env/ directory in the cloned repository.
+1. Create an `.env` file inside a new `env/` directory in the cloned repository.
+2. Add the following environment variables (without quotes):
 
-Add the following environment variables without quotes:
-
+```sh
 PG_HOST=localhost
 PG_PORT=5432
 PG_USER=<your_postgresql_user>
@@ -144,40 +106,39 @@ PG_PASSWORD=<your_password>
 PG_DRIVER=postgresql+psycopg2
 PG_DATABASE=<your_database_name>
 WORK_PATH=<your_project_directory>
+```
 
-4️⃣ Create the Database
+### 5️⃣ Create the Database
 
-Ensure that your PostgreSQL database name matches the one in the .env file before proceeding.
+Ensure that your PostgreSQL database name matches the one in the `.env` file before proceeding.
 
-Data Processing and Notebook Execution 📝
+---
 
-Executing the Notebooks
+## 📝 Data Processing and Notebook Execution
+
+### **Executing the Notebooks**
 
 We use Jupyter Notebook to process and transform the dataset. Execute the notebooks in the following order:
 
-Notebook
+| Notebook                  | Purpose                                      |
+|---------------------------|----------------------------------------------|
+| `001_rawDataLoad.ipynb`   | Loads raw data into PostgreSQL              |
+| `002_candidatosEDA.ipynb` | Performs exploratory data analysis (EDA)    |
+| `003_cleanDataLoad.ipynb` | Cleans and transforms the dataset           |
 
-Purpose
+📌 **Important:** During data cleaning, we verified that the `is_hire` column was included to track hiring status.
 
-001_rawDataLoad.ipynb
+> **Reminder:** Select the correct Python kernel when running the notebook and install `ipykernel` to support Jupyter notebooks in VS Code.
 
-Loads raw data into PostgreSQL
+---
 
-002_candidatosEDA.ipynb
+## 🔗 Connect the Database with Power BI
 
-Performs exploratory data analysis (EDA)
+1. Open **Power BI Desktop** and create a new dashboard.
+2. Select the option **Get Data** and choose **PostgreSQL Database**.
+3. Insert the **PostgreSQL server name** and **database name**.
+4. Fill in your **credentials**.
+5. If the connection is successful, the following tables will appear:
 
-003_cleanDataLoad.ipynb
+🎯 **Select the `candidates_hired` table and start creating your visualizations!**
 
-Cleans and transforms the dataset
-
-📌 Important: During data cleaning, we verified that the is_hire column was included to track hiring status.
-Recuerde elegir el kernel de Python correcto al momento de ejecutar el notebook e instalar ipykernel para soportar notebooks Jupyter en VS Code.
-
-Conectar la base de datos con Power BI
-
-Abra Power BI Desktop y cree un nuevo panel. Seleccione la opción Obtener datos ; asegúrese de elegir la opción "Base de datos PostgreSQL".
-Inserte el nombre del servidor PostgreSQL y de la base de datos.
-Llene los siguientes campos con sus credenciales.
-Si logras conectarte a la base de datos aparecerán las siguientes tablas:
-¡Elige la tabla candidates_hired y empieza a hacer tus propias visualizaciones!
