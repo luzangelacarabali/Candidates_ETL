@@ -63,6 +63,7 @@ The dataset (`candidates.csv`) contains **50,000 rows** and **10 columns**, each
 
 ```sh
 git clone  https://github.com/luzangelacarabali/Candidates_ETL.git
+cd Candidates_ETL
 ```
 
 ### 2️⃣ Install Dependencies with Poetry
@@ -75,18 +76,11 @@ Once the virtual environment is created, run:
 poetry install
 ```
 
-In case of errors with the `.lock` file, execute:
-
-```sh
-poetry lock
-```
-
 Now, you can run the notebooks!
 
 ### 3️⃣ Set Up a Virtual Environment
 
 ```sh
-poetry install
 poetry run jupyter notebook
 ```
 
