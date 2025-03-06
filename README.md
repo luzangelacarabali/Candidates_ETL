@@ -85,7 +85,7 @@ PG_USER=<your_postgresql_user>
 PG_PASSWORD=<your_password>
 PG_DRIVER=postgresql+psycopg2
 PG_DATABASE=<your_database_name>
-WORK_PATH=<your_project_directory>
+
 ```
 
 ### 5️⃣ Create the Database
