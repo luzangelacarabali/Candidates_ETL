@@ -79,8 +79,8 @@ To establish the database connection, we use the `connection_db.py` module. This
 2. Add the following environment variables (without quotes):
 
 ```sh
-PG_HOST=localhost
-PG_PORT=5432
+PG_HOST=DB_HOST
+PG_PORT=DB_PORT
 PG_USER=<your_postgresql_user>
 PG_PASSWORD=<your_password>
 PG_DRIVER=postgresql+psycopg2
