@@ -102,7 +102,7 @@ We use Jupyter Notebook to process and transform the dataset. Execute the notebo
 
 | Notebook                  | Purpose                                      |
 |---------------------------|----------------------------------------------|
-| `001_rawDataLoad.ipynb`   | Loads raw data into PostgreSQL              |
+| `001_extrac.ipynb`   | Loads raw data into PostgreSQL              |
 | `002_candidatosEDA.ipynb` | Performs exploratory data analysis (EDA)    |
 | `003_cleanDataLoad.ipynb` | Cleans and transforms the dataset           |
 
