@@ -6,7 +6,7 @@
 
 ## ✨ Overview
 
-In this workshop, we worked with randomly generated candidate data stored in a CSV file. The objective was to load, clean, and transform the data to extract meaningful insights using Python, Jupyter Notebook, PostgreSQL, and Power BI.
+In this workshop, we worked with  candidate data stored in a CSV file. The objective was to load, clean, and transform the data to extract meaningful insights using Python, Jupyter Notebook, PostgreSQL, and Power BI.
 
 ---
 
