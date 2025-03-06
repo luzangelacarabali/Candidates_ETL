@@ -104,7 +104,7 @@ We use Jupyter Notebook to process and transform the dataset. Execute the notebo
 |---------------------------|----------------------------------------------|
 | `001_extrac.ipynb`   | Loads raw data into PostgreSQL              |
 | `002_candidatosEDA.ipynb` | Performs exploratory data analysis (EDA)    |
-| `003_cleanDataLoad.ipynb` | Cleans and transforms the dataset           |
+| `003_cleanDataLoad.ipynb` | Cleans the dataset           |
 
 📌 **Important:** During data cleaning, we verified that the `is_hire` column was included to track hiring status.
 
