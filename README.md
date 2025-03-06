@@ -118,11 +118,9 @@ We use Jupyter Notebook to process and transform the dataset. Execute the notebo
 
 2. Insert the **PostgreSQL server name** and **database name**.                          ![image (12)](https://github.com/user-attachments/assets/0bbe9bbb-148b-4d64-be6d-22a06bb25ac5)
 
-3. If the connection is successful, the following tables will appear:
+3. 🎯 **Select the `cleaned_candidates` table and start creating your visualizations!**
 
 ![image (13)](https://github.com/user-attachments/assets/21955d06-e3e8-4274-b283-c7e281da214c)
-
-🎯 **Select the `cleaned_candidates` table and start creating your visualizations!**
 
 ---
 Thank you! 😊
