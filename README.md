@@ -121,7 +121,7 @@ We use Jupyter Notebook to process and transform the dataset. Execute the notebo
 3. 🎯 **Select the `cleaned_candidates` table and start creating your visualizations!**
 
 ![image (13)](https://github.com/user-attachments/assets/21955d06-e3e8-4274-b283-c7e281da214c)
-4. Selecciona la tabla candidatos_contratados y comienza a crear tus propias visualizaciones. ¡Explora los datos y descubre información interesante! 🚀
+4. Selecciona la tabla candidatos_contratados y comienza a crear tus propias visualizaciones. 
 ![image (14)](https://github.com/user-attachments/assets/3a956816-9740-47d0-82b8-5bfd9d0f0ef4)
 
 ---
